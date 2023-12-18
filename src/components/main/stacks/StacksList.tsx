@@ -1,5 +1,11 @@
+import { Box } from '@chakra-ui/react';
+
 const StacksList = () => {
-  return <p>스택</p>;
+  return (
+    <>
+      <Box h={'300px'} bg={'skyblue'} />
+    </>
+  );
 };
 
 export default StacksList;
