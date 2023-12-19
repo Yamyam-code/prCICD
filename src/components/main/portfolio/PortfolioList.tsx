@@ -1,18 +1,33 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
+import Portfolio from './Portfolio';
 
 const PortfolioList = () => {
+  const portfoliodata = [
+    {
+      BlogImg: 'red',
+      StackImg1: 'red',
+      StackImg2: 'red',
+    },
+    {
+      BlogImg: 'red',
+      StackImg1: 'red',
+      StackImg2: 'red',
+    },
+    {
+      BlogImg: 'red',
+      StackImg1: 'red',
+      StackImg2: 'red',
+    },
+    {
+      BlogImg: 'red',
+      StackImg1: 'red',
+      StackImg2: 'red',
+    },
+  ];
+
   return (
-    <Flex
-      w={'750px'}
-      boxSizing='border-box'
-      flexWrap={'wrap'}
-      direction={'row'}
-      gap={'50px'}
-    >
-      <Box bg={'red'} w={'350px'} h={'350px'} rounded={'md'} />
-      <Box bg={'blue'} w={'350px'} h={'350px'} rounded={'md'} />
-      <Box bg={'yellow'} w={'350px'} h={'350px'} rounded={'md'} />
-      <Box bg={'green'} w={'350px'} h={'350px'} rounded={'md'} />
+    <Flex w={'100%'} boxSizing='border-box' direction={'column'} gap={'50px'}>
+      {[portfoliodata.map((e) => <Portfolio data={e} />)]}
     </Flex>
   );
 };

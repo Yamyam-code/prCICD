@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import Header from './header/Header';
 import Main from './main/Main';
 import Playground from './main/playground/Playground';
@@ -15,8 +15,10 @@ const Product = () => {
         height={'100vh'}
         bg={'transparent'}
       >
-        <Header />
-        <Main />
+        <Box w={1000}>
+          <Header />
+          <Main />
+        </Box>
       </Flex>
     </>
   );
