@@ -21,14 +21,14 @@ const Header = () => {
         <Box
           w={200}
           h={200}
-          bgImage={"url('/reactIcon.png')"}
+          bgImage={"url('/icons/reactIcon.png')"}
           bgPosition='center'
           bgSize={'contain'}
         ></Box>
         <Box
           w={200}
           h={200}
-          bgImage={"url('/typescriptIcon.png')"}
+          bgImage={"url('/icons/typescriptIcon.png')"}
           bgPosition='center'
           bgSize={'contain'}
         ></Box>

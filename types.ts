@@ -1,5 +1,6 @@
 export type PortfolioData = {
-  BlogImg: string;
-  StackImg1: string;
-  StackImg2: string;
+  image: string;
+  icon1: string;
+  icon2: string;
+  text: string;
 };
