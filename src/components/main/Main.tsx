@@ -13,8 +13,10 @@ const Main = () => {
       e.preventDefault();
 
       const { deltaY } = e;
-      const { scrollTop } = outerDivRef.current!;
+      const scrollTop = window.scrollY;
       const pageHeight = window.innerHeight;
+
+      console.log(scrollIndex);
 
       if (deltaY === 0) {
         return;
@@ -23,32 +25,35 @@ const Main = () => {
       if (deltaY > 0) {
         // 스크롤 다운
         if (scrollTop >= 0 && scrollTop < pageHeight) {
-          console.log('현재 1페이지, down');
           window.scrollTo({ top: pageHeight, behavior: 'smooth' });
           setScrollIndex(2);
-        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
-          console.log('현재 2페이지, down');
+        } else if (scrollTop < pageHeight * 2) {
           window.scrollTo({ top: pageHeight * 2, behavior: 'smooth' });
           setScrollIndex(3);
-        } else {
-          console.log('현재 3페이지, down');
-          window.scrollTo({ top: pageHeight * 2, behavior: 'smooth' });
-          setScrollIndex(3);
+        } else if (scrollTop < pageHeight * 3) {
+          window.scrollTo({ top: pageHeight * 3, behavior: 'smooth' });
+          setScrollIndex(4);
+        } else if (scrollTop < pageHeight * 4) {
+          window.scrollTo({ top: pageHeight * 4, behavior: 'smooth' });
+          setScrollIndex(5);
         }
       } else {
         // 스크롤 업
-        if (scrollTop >= 0 && scrollTop < pageHeight) {
-          console.log('현재 1페이지, up');
+        if (scrollTop >= 0 && scrollTop <= pageHeight) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
           setScrollIndex(1);
-        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 1.5) {
-          console.log('현재 2페이지, up');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          setScrollIndex(1);
-        } else {
-          console.log('현재 3페이지, up');
+        } else if (scrollTop <= pageHeight * 2) {
           window.scrollTo({ top: pageHeight, behavior: 'smooth' });
           setScrollIndex(2);
+        } else if (scrollTop <= pageHeight * 3) {
+          window.scrollTo({ top: pageHeight * 2, behavior: 'smooth' });
+          setScrollIndex(2);
+        } else if (scrollTop <= pageHeight * 4) {
+          window.scrollTo({ top: pageHeight * 3, behavior: 'smooth' });
+          setScrollIndex(3);
+        } else if (scrollTop <= pageHeight * 5) {
+          window.scrollTo({ top: pageHeight * 4, behavior: 'smooth' });
+          setScrollIndex(4);
         }
       }
     };
@@ -63,7 +68,7 @@ const Main = () => {
         outerDivRefCurrent.removeEventListener('wheel', handleScroll);
       }
     };
-  }, [outerDivRef]);
+  }, []);
   return (
     <Flex ref={outerDivRef} w={'100vw'} justify={'center'}>
       <Box w={1100} color={'white'}>
