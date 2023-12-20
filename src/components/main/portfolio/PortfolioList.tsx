@@ -7,7 +7,7 @@ const PortfolioList = () => {
 
   return (
     <Flex w={'100%'} boxSizing='border-box' direction={'column'} gap={'50px'}>
-      {[portfolioData.map((e) => <Portfolio data={e} />)]}
+      {[portfolioData.map((e) => <Portfolio data={e} key={e.projectName} />)]}
     </Flex>
   );
 };

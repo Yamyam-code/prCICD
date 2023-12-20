@@ -10,3 +10,15 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+a {
+  transition: 0.3s all;
+}
+
+a:hover {
+  scale: 1.01;
+}
+
+p {
+  cursor: default;
+}

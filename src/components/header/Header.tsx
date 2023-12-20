@@ -14,7 +14,7 @@ const Header = () => {
     >
       <Flex w={'100%'}>
         <Text fontSize={70} fontWeight={700}>
-          Developer based
+          Projects based
         </Text>
       </Flex>
       <Flex w={'100%'} justify={'flex-end'} gap={10}>

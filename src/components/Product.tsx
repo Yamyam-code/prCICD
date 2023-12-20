@@ -1,11 +1,10 @@
 import { Box, Flex } from '@chakra-ui/react';
-import Header from './header/Header';
 import Main from './main/Main';
 import Playground from './main/playground/Playground';
 
 const Product = () => {
   return (
-    <>
+    <Box minW={1100}>
       <Playground />
       <Flex
         direction={'column'}
@@ -15,12 +14,9 @@ const Product = () => {
         height={'100vh'}
         bg={'transparent'}
       >
-        <Box w={1000}>
-          <Header />
-          <Main />
-        </Box>
+        <Main />
       </Flex>
-    </>
+    </Box>
   );
 };
 
