@@ -24,7 +24,6 @@ const Main = () => {
       }
 
       if (deltaY > 0) {
-        // 스크롤 다운
         if (scrollTop >= 0 && scrollTop < pageHeight) {
           window.scrollTo({ top: pageHeight, behavior: 'smooth' });
           setScrollIndex(2);
@@ -39,7 +38,6 @@ const Main = () => {
           setScrollIndex(5);
         }
       } else {
-        // 스크롤 업
         if (scrollTop >= 0 && scrollTop <= pageHeight) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
           setScrollIndex(1);
@@ -66,7 +64,7 @@ const Main = () => {
         outerDivRefCurrent.removeEventListener('wheel', handleScroll);
       }
     };
-  }, []);
+  }, [scrollIndex]);
   return (
     <Flex ref={outerDivRef} w={'100vw'} justify={'center'}>
       <Box w={1100} color={'white'}>
