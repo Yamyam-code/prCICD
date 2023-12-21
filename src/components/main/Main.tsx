@@ -3,6 +3,7 @@ import PortfolioList from './portfolio/PortfolioList';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import { useEffect, useRef, useState } from 'react';
+import Dots from './dots/Dots';
 
 const Main = () => {
   const outerDivRef = useRef<HTMLDivElement | null>(null);
@@ -47,12 +48,9 @@ const Main = () => {
           setScrollIndex(2);
         } else if (scrollTop <= pageHeight * 3) {
           window.scrollTo({ top: pageHeight * 2, behavior: 'smooth' });
-          setScrollIndex(2);
-        } else if (scrollTop <= pageHeight * 4) {
-          window.scrollTo({ top: pageHeight * 3, behavior: 'smooth' });
           setScrollIndex(3);
-        } else if (scrollTop <= pageHeight * 5) {
-          window.scrollTo({ top: pageHeight * 4, behavior: 'smooth' });
+        } else if (scrollTop <= pageHeight * 4.1) {
+          window.scrollTo({ top: pageHeight * 3, behavior: 'smooth' });
           setScrollIndex(4);
         }
       }
@@ -76,6 +74,7 @@ const Main = () => {
         <PortfolioList />
         <Footer />
       </Box>
+      <Dots scrollIndex={scrollIndex} />
     </Flex>
   );
 };
