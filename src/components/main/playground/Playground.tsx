@@ -8,14 +8,13 @@ const rotate = keyframes`
   `;
 
 const Playground = () => {
-  const move = `${rotate} infinite 20s`;
+  const move = `${rotate} infinite 15s`;
 
   return (
     <Box
       w={'100vw'}
       h={'100vh'}
       bg={'#150636'}
-      // linear-gradient(to bottom, #000035, #000052dc)
       position={'fixed'}
       top={0}
       bottom={0}
@@ -27,7 +26,7 @@ const Playground = () => {
         left={'-150vw'}
         w={'300vw'}
         h={'300vw'}
-        borderRadius={'300vw'}
+        borderRadius={'150vw'}
         background={'linear-gradient(rgba(252,251,232,0.03) 10%, transparent)'}
         animation={move}
       />

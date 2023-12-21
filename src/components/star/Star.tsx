@@ -18,7 +18,7 @@ const twinkle = keyframes`
 const Star = () => {
   const widthRandom = Math.random() * 100;
   const heightRandom = Math.random() * 100;
-  const twinkleRandom = 2 + Math.random();
+  const twinkleRandom = 2 + Math.random() * 1.5;
   const sizeRandom = 5 + Math.random() * 5;
   const animation = `${twinkle} ${twinkleRandom}s infinite`;
 
