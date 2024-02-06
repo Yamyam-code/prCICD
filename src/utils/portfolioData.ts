@@ -32,6 +32,16 @@ const fortFolioData = [
     icon2url: 'https://emotion.sh/docs/introduction',
     text: '숙소리스트 무한스크롤',
   },
+  {
+    projectName: 'TRIPVOTE',
+    projectURL: 'https://github.com/Strong-Potato/TripVote-FE',
+    image: '/icons/tripvote.png',
+    icon1: '/icons/reactquery.png',
+    icon1url: 'https://tanstack.com/query/latest/docs/react/quick-start',
+    icon2: 'https://sass-lang.com/assets/img/logos/logo.svg',
+    icon2url: 'https://sass-lang.com/guide/',
+    text: '장소 검색 및 지도 구현',
+  },
 ];
 
 export default fortFolioData;

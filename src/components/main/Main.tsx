@@ -36,6 +36,9 @@ const Main = () => {
         } else if (scrollTop < pageHeight * 4) {
           window.scrollTo({ top: pageHeight * 4, behavior: 'smooth' });
           setScrollIndex(5);
+        } else if (scrollTop < pageHeight * 5) {
+          window.scrollTo({ top: pageHeight * 5, behavior: 'smooth' });
+          setScrollIndex(6);
         }
       } else {
         if (scrollTop >= 0 && scrollTop <= pageHeight) {
@@ -50,6 +53,9 @@ const Main = () => {
         } else if (scrollTop <= pageHeight * 4.1) {
           window.scrollTo({ top: pageHeight * 3, behavior: 'smooth' });
           setScrollIndex(4);
+        } else if (scrollTop <= pageHeight * 5.1) {
+          window.scrollTo({ top: pageHeight * 4, behavior: 'smooth' });
+          setScrollIndex(5);
         }
       }
     };
